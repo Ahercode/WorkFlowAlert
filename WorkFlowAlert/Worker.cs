@@ -1,12 +1,9 @@
 using System.Globalization;
-using System.Runtime.InteropServices.JavaScript;
-using System.Text.Json;
 using MailKit.Net.Smtp;
 using MailKit.Security;
 using Microsoft.Data.SqlClient;
 using MimeKit;
 using MimeKit.Text;
-using WorkFlowAlert.Model;
 
 namespace WorkFlowAlert;
 
@@ -40,10 +37,10 @@ public class Worker : BackgroundService
                             {
                                 rowData.Add(reader.GetName(i), reader.GetValue(i));
                             }
-                            // var json = JsonSerializer.Serialize(rowData);
                             
                             int isComplete = Convert.ToInt32(rowData["ISCOMPLETE"]);
                             string audtUser = Convert.ToString(rowData["AUDTUSER"]);
+                            var sendTo = _configuration["EmailConfiguration:SendTo"];
                             
                             if (rowData["AUDTTIME"] is decimal audtTimeDecimal)
                             {
@@ -71,8 +68,8 @@ public class Worker : BackgroundService
                             {
                                 const string emailSubject = "Purchase Order Completed";
                                 const string emailBody = "Your purchase order has been completed";
-                                const string to = "philipkelly407@gmail.com";
-                                await SendEmail(to, emailSubject, emailBody);
+                                
+                                await SendEmail(sendTo, emailSubject, emailBody);
                                 _logger.LogInformation("Send email to {audtUser}. for completed order", audtUser);
                             }
                         }
