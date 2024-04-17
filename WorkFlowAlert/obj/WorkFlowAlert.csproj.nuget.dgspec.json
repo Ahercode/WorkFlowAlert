@@ -1,0 +1,87 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/philip/RiderProjects/WorkFlowAlert/WorkFlowAlert/WorkFlowAlert.csproj": {}
+  },
+  "projects": {
+    "/Users/philip/RiderProjects/WorkFlowAlert/WorkFlowAlert/WorkFlowAlert.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/philip/RiderProjects/WorkFlowAlert/WorkFlowAlert/WorkFlowAlert.csproj",
+        "projectName": "WorkFlowAlert",
+        "projectPath": "/Users/philip/RiderProjects/WorkFlowAlert/WorkFlowAlert/WorkFlowAlert.csproj",
+        "packagesPath": "/Users/philip/.nuget/packages/",
+        "outputPath": "/Users/philip/RiderProjects/WorkFlowAlert/WorkFlowAlert/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/philip/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.2.0, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Microsoft.SqlServer.Server": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.311/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
